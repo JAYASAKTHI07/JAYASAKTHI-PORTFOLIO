@@ -43,7 +43,7 @@ const HeroSection = () => {
             <div className="bg-white rounded-lg shadow-lg p-8 border border-gray-100 transform rotate-3 hover:rotate-0 transition-transform duration-300">
               <div className="aspect-square rounded-full bg-portfolio-light flex items-center justify-center overflow-hidden border-4 border-portfolio-accent mx-auto mb-6" style={{ maxWidth: '250px' }}>
                 <Avatar className="w-full h-full">
-                  <AvatarImage src="/profile.jpg" alt="Jaya Sakthi S" />
+                  <AvatarImage src="/lovable-uploads/60ceaa93-0994-48f8-9185-32309f5a30d9.png" alt="Jaya Sakthi S" />
                   <AvatarFallback className="text-5xl font-bold text-portfolio-primary">JS</AvatarFallback>
                 </Avatar>
               </div>
