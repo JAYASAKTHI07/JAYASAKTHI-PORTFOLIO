@@ -1,6 +1,7 @@
 
 import { ArrowDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 
 const HeroSection = () => {
   return (
@@ -41,7 +42,10 @@ const HeroSection = () => {
           <div className="md:w-1/2 order-1 md:order-2 animate-fade-in" style={{ animationDelay: '0.4s' }}>
             <div className="bg-white rounded-lg shadow-lg p-8 border border-gray-100 transform rotate-3 hover:rotate-0 transition-transform duration-300">
               <div className="aspect-square rounded-full bg-portfolio-light flex items-center justify-center overflow-hidden border-4 border-portfolio-accent mx-auto mb-6" style={{ maxWidth: '250px' }}>
-                <span className="text-5xl font-bold text-portfolio-primary">JS</span>
+                <Avatar className="w-full h-full">
+                  <AvatarImage src="/profile.jpg" alt="Jaya Sakthi S" />
+                  <AvatarFallback className="text-5xl font-bold text-portfolio-primary">JS</AvatarFallback>
+                </Avatar>
               </div>
               <div className="text-center">
                 <p className="text-sm text-gray-500 mb-2">Connect with me</p>
