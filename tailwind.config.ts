@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -54,11 +53,11 @@ export default {
 					foreground: 'hsl(var(--card-foreground))'
 				},
                 portfolio: {
-                    primary: '#1a365d',
-                    secondary: '#2563eb',
-                    accent: '#60a5fa',
-                    light: '#f0f9ff',
-                    dark: '#0f172a'
+                    primary: '#8A7CB2',     // Darker shade of purple
+                    secondary: '#CBC3E3',   // Light purple as requested
+                    accent: '#DBD3F0',      // Lighter purple for accents
+                    light: '#F5F2FF',       // Very light purple for backgrounds
+                    dark: '#5D5184'         // Very dark purple
                 }
 			},
 			borderRadius: {
