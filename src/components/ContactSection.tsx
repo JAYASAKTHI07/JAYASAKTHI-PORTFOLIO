@@ -1,204 +1,111 @@
 
-import { useState } from 'react';
-import { Card, CardContent } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Button } from "@/components/ui/button";
-import { Mail, Phone, MapPin, Github, Linkedin } from 'lucide-react';
-import { useToast } from "@/components/ui/use-toast";
+import React, { useState } from 'react';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import { toast } from "sonner";
 
 const ContactSection = () => {
-  const { toast } = useToast();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     message: ''
   });
-  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
-    
-    // Simulate form submission
-    setTimeout(() => {
-      toast({
-        title: "Message sent!",
-        description: "Thank you for reaching out. I'll get back to you soon.",
-      });
-      
-      setFormData({
-        name: '',
-        email: '',
-        message: ''
-      });
-      
-      setIsSubmitting(false);
-    }, 1500);
+    toast.success("Message sent successfully!");
+    setFormData({ name: '', email: '', message: '' });
   };
 
   return (
-    <section id="contact" className="py-20 px-4 bg-white">
-      <div className="container mx-auto">
-        <div className="mb-12 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-portfolio-primary mb-4 inline-block relative">
-            Get In Touch
-            <span className="block h-1 w-24 bg-portfolio-secondary mx-auto mt-2"></span>
-          </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            Have a question or want to work together? Feel free to contact me!
-          </p>
-        </div>
-        
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          <Card className="bg-white border border-gray-100 shadow-md">
-            <CardContent className="p-6">
-              <h3 className="text-xl font-semibold text-portfolio-primary mb-6">Send Me a Message</h3>
-              <form onSubmit={handleSubmit}>
-                <div className="space-y-4">
-                  <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
-                      Your Name
-                    </label>
-                    <Input
-                      id="name"
-                      name="name"
-                      placeholder="Enter your name"
-                      value={formData.name}
-                      onChange={handleChange}
-                      required
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-                      Your Email
-                    </label>
-                    <Input
-                      id="email"
-                      name="email"
-                      type="email"
-                      placeholder="Enter your email"
-                      value={formData.email}
-                      onChange={handleChange}
-                      required
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
-                      Message
-                    </label>
-                    <Textarea
-                      id="message"
-                      name="message"
-                      placeholder="Enter your message"
-                      value={formData.message}
-                      onChange={handleChange}
-                      rows={5}
-                      required
-                    />
-                  </div>
-                  <Button 
-                    type="submit" 
-                    className="w-full bg-portfolio-secondary hover:bg-portfolio-primary text-white"
-                    disabled={isSubmitting}
-                  >
-                    {isSubmitting ? "Sending..." : "Send Message"}
-                  </Button>
-                </div>
-              </form>
-            </CardContent>
-          </Card>
-          
-          <Card className="bg-portfolio-primary text-white border border-gray-100 shadow-md">
-            <CardContent className="p-6">
-              <h3 className="text-xl font-semibold mb-6">Contact Information</h3>
-              <div className="space-y-6">
-                <div className="flex items-start">
-                  <Mail className="w-5 h-5 mr-3 mt-0.5" />
-                  <div>
-                    <h4 className="font-medium">Email</h4>
-                    <a 
-                      href="mailto:jayasakthi1024@gmail.com" 
-                      className="text-portfolio-light hover:underline"
-                    >
-                      jayasakthi1024@gmail.com
-                    </a>
-                  </div>
-                </div>
-                
-                <div className="flex items-start">
-                  <MapPin className="w-5 h-5 mr-3 mt-0.5" />
-                  <div>
-                    <h4 className="font-medium">Location</h4>
-                    <p className="text-portfolio-light">Tamil Nadu, India</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start">
-                  <Github className="w-5 h-5 mr-3 mt-0.5" />
-                  <div>
-                    <h4 className="font-medium">GitHub</h4>
-                    <a 
-                      href="https://github.com" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="text-portfolio-light hover:underline"
-                    >
-                      github.com
-                    </a>
-                  </div>
-                </div>
-                
-                <div className="flex items-start">
-                  <Linkedin className="w-5 h-5 mr-3 mt-0.5" />
-                  <div>
-                    <h4 className="font-medium">LinkedIn</h4>
-                    <a 
-                      href="https://linkedin.com" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="text-portfolio-light hover:underline"
-                    >
-                      linkedin.com
-                    </a>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="mt-8 pt-8 border-t border-white/20">
-                <h4 className="font-medium mb-4">Let's Connect</h4>
-                <div className="flex space-x-4">
-                  <a 
-                    href="https://github.com" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="bg-white/10 hover:bg-white/20 p-2 rounded-full transition-colors"
-                  >
-                    <Github className="w-5 h-5" />
-                  </a>
-                  <a 
-                    href="https://linkedin.com" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="bg-white/10 hover:bg-white/20 p-2 rounded-full transition-colors"
-                  >
-                    <Linkedin className="w-5 h-5" />
-                  </a>
-                  <a 
-                    href="mailto:jayasakthi1024@gmail.com"
-                    className="bg-white/10 hover:bg-white/20 p-2 rounded-full transition-colors"
-                  >
-                    <Mail className="w-5 h-5" />
-                  </a>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
+    <section id="contact" className="py-16 bg-portfolio-light">
+      <div className="container mx-auto px-4">
+        <h2 className="text-3xl font-bold text-center mb-8">Contact Me</h2>
+        <div className="max-w-2xl mx-auto">
+          <form onSubmit={handleSubmit} className="space-y-6">
+            <div>
+              <label htmlFor="name" className="block mb-2 font-medium">
+                Name
+              </label>
+              <Input
+                type="text"
+                id="name"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                required
+                className="w-full"
+              />
+            </div>
+            <div>
+              <label htmlFor="email" className="block mb-2 font-medium">
+                Email
+              </label>
+              <Input
+                type="email"
+                id="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                required
+                className="w-full"
+              />
+            </div>
+            <div>
+              <label htmlFor="message" className="block mb-2 font-medium">
+                Message
+              </label>
+              <Textarea
+                id="message"
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+                required
+                className="w-full min-h-[150px]"
+              />
+            </div>
+            <Button 
+              type="submit" 
+              className="w-full py-3 bg-portfolio-primary hover:bg-portfolio-dark text-white"
+            >
+              Send Message
+            </Button>
+          </form>
+          <div className="mt-12">
+            <h3 className="text-xl font-semibold mb-4">Get in Touch</h3>
+            <div className="space-y-3">
+              <p className="flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-3 text-portfolio-primary" viewBox="0 0 20 20" fill="currentColor">
+                  <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                  <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                </svg>
+                <a href="mailto:info@example.com" className="hover:text-portfolio-primary">
+                  info@example.com
+                </a>
+              </p>
+              <p className="flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-3 text-portfolio-primary" viewBox="0 0 20 20" fill="currentColor">
+                  <path fillRule="evenodd" d="M7 2a2 2 0 00-2 2v12a2 2 0 002 2h6a2 2 0 002-2V4a2 2 0 00-2-2H7zm3 14a1 1 0 100-2 1 1 0 000 2z" clipRule="evenodd" />
+                </svg>
+                <span>+1 (123) 456-7890</span>
+              </p>
+              <p className="flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-3 text-portfolio-primary" viewBox="0 0 20 20" fill="currentColor">
+                  <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
+                </svg>
+                <span>New York, NY 10001</span>
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
