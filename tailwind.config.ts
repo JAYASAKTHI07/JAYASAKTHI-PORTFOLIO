@@ -55,7 +55,7 @@ export default {
 				},
                 portfolio: {
                     primary: '#8A7CB2',     // Darker shade of purple
-                    secondary: '#DDA15E',   // Orange/gold accent
+                    secondary: '#FF6B6B',   // Coral/red accent
                     accent: '#DBD3F0',      // Lighter purple for accents
                     light: '#F5F2FF',       // Very light purple for backgrounds
                     dark: '#5D5184'         // Very dark purple
