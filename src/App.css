@@ -1,3 +1,4 @@
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -12,10 +13,10 @@
   transition: filter 300ms;
 }
 .logo:hover {
-  filter: drop-shadow(0 0 2em #CBC3E3);
+  filter: drop-shadow(0 0 2em #DDA15E);
 }
 .logo.react:hover {
-  filter: drop-shadow(0 0 2em #CBC3E3);
+  filter: drop-shadow(0 0 2em #DDA15E);
 }
 
 @keyframes logo-spin {
