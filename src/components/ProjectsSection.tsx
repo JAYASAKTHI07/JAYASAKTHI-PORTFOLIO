@@ -31,13 +31,15 @@ const ProjectsSection = () => {
       link: "#"
     },
     {
-      title: "Arduino Obstacle Avoiding Robot with Voice Control",
-      category: "Automation and Control Project",
+      title: "SONAR Radar Using Ultrasonic Sensor",
+      category: "Embedded and Sensing Project",
       description: [
-        "Built an Arduino-based robot to navigate intricate routes and motor drivers.",
-        "Integrated Bluetooth and voice command features for remote navigation."
+        "Designed a SONAR-based object detection system using Arduino UNO, ultrasonic sensor, and servo motor.",
+        "Visualized real-time distance data in radar format using Processing IDE.",
+        "Enabled 180° scanning and obstacle tracking for surveillance applications.",
+        "Applied in areas like defense, maritime safety, and environment monitoring."
       ],
-      tags: ["Arduino", "Robotics", "Bluetooth", "Voice Control"],
+      tags: ["Arduino", "Ultrasonic Sensor", "Processing IDE", "SONAR", "Servo Motor"],
       link: "#"
     }
   ];
