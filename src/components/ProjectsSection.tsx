@@ -52,31 +52,31 @@ const ProjectsSection = () => {
             Projects
             <span className="block h-1 w-24 bg-portfolio-secondary mx-auto mt-2"></span>
           </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
+          <p className="text-portfolio-dark max-w-2xl mx-auto">
             Here are some of the projects I've worked on during my academic journey.
           </p>
         </div>
         
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
-            <Card key={index} className="bg-white border border-gray-100 shadow-md hover:shadow-xl transition-all">
+            <Card key={index} className="bg-white border border-portfolio-border shadow-md hover:shadow-xl transition-all">
               <CardHeader className="pb-2">
                 <div className="mb-2">
-                  <Badge variant="secondary" className="bg-portfolio-light text-portfolio-primary">
+                  <Badge variant="secondary" className="bg-portfolio-accent text-portfolio-primary">
                     {project.category}
                   </Badge>
                 </div>
                 <CardTitle className="text-xl text-portfolio-primary">{project.title}</CardTitle>
               </CardHeader>
               <CardContent>
-                <ul className="list-disc pl-5 space-y-2 text-gray-600 text-sm mb-4">
+                <ul className="list-disc pl-5 space-y-2 text-portfolio-dark text-sm mb-4">
                   {project.description.map((point, i) => (
                     <li key={i}>{point}</li>
                   ))}
                 </ul>
                 <div className="flex flex-wrap gap-2 mt-4">
                   {project.tags.map((tag, i) => (
-                    <Badge key={i} variant="outline" className="bg-gray-50">
+                    <Badge key={i} variant="outline" className="bg-portfolio-light border-portfolio-highlight text-portfolio-primary">
                       {tag}
                     </Badge>
                   ))}
@@ -85,7 +85,7 @@ const ProjectsSection = () => {
               <CardFooter>
                 <Button 
                   variant="ghost" 
-                  className="text-portfolio-secondary hover:text-portfolio-primary hover:bg-portfolio-light w-full"
+                  className="text-portfolio-secondary hover:text-portfolio-primary hover:bg-portfolio-accent w-full"
                 >
                   View Project Details
                 </Button>

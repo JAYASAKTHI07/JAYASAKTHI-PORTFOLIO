@@ -54,11 +54,13 @@ export default {
 					foreground: 'hsl(var(--card-foreground))'
 				},
                 portfolio: {
-                    primary: '#8A7CB2',     // Darker shade of purple
-                    secondary: '#FF6B6B',   // Coral/red accent
-                    accent: '#DBD3F0',      // Lighter purple for accents
-                    light: '#F5F2FF',       // Very light purple for backgrounds
-                    dark: '#5D5184'         // Very dark purple
+                    primary: '#7E6CAB',     // Dusty Violet - Calm and professional with a creative twist
+                    secondary: '#D99A6C',   // Terracotta Blush - A grounded, warm highlight to balance cool tones
+                    accent: '#CBD9E5',      // Mist Blue - A calming tone for sections, cards, or hover states
+                    light: '#FAFAFA',       // Snow White - Super clean and modern, great for readability
+                    dark: '#2F3A50',        // Graphite Navy - Elegant, powerful choice for text and headers
+                    highlight: '#E6AACE',   // Rose Quartz - For hover effects, tags, or portfolio project highlights
+                    border: '#D3D3D3'       // Cool Gray - For dividing lines or subtle shadows
                 }
 			},
 			borderRadius: {
