@@ -54,13 +54,13 @@ export default {
 					foreground: 'hsl(var(--card-foreground))'
 				},
                 portfolio: {
-                    primary: '#7E6CAB',     // Dusty Violet - Calm and professional with a creative twist
-                    secondary: '#D99A6C',   // Terracotta Blush - A grounded, warm highlight to balance cool tones
-                    accent: '#CBD9E5',      // Mist Blue - A calming tone for sections, cards, or hover states
-                    light: '#FAFAFA',       // Snow White - Super clean and modern, great for readability
-                    dark: '#2F3A50',        // Graphite Navy - Elegant, powerful choice for text and headers
-                    highlight: '#E6AACE',   // Rose Quartz - For hover effects, tags, or portfolio project highlights
-                    border: '#D3D3D3'       // Cool Gray - For dividing lines or subtle shadows
+                    primary: '#9181A2',     // Soft Plum - Gentle, professional, and sophisticated
+                    secondary: '#D4A373',   // Clay Rose - Warm, organic highlight that pairs beautifully
+                    accent: '#DDE4D3',      // Pale Sage - Cool green-gray that soothes and balances
+                    light: '#F8F6F0',       // Ivory White - Soft off-white with an earthy undertone
+                    dark: '#3B3A3E',        // Obsidian Charcoal - Deep, near-black for strong contrast
+                    highlight: '#E2B7B1',   // Dusty Rose Pink - Elegant and muted for subtle emphasis
+                    border: '#CBC7BE'       // Warm Ash Gray - Understated, useful for dividers and background shapes
                 }
 			},
 			borderRadius: {
