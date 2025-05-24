@@ -15,6 +15,7 @@ const ProjectsSection = () => {
         "Designed a responsive UI ensuring smooth performance across 10+ device types, enhancing accessibility and user experience."
       ],
       tags: ["HTML", "CSS", "JavaScript", "Java", "Spring", "MySQL"],
+      image: "https://images.unsplash.com/photo-1489875347897-49f64b51c1f8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
       link: "#"
     },
     {
@@ -28,6 +29,7 @@ const ProjectsSection = () => {
         "Achieved high visual clarity and structural preservation in enhanced satellite images."
       ],
       tags: ["PyTorch", "TensorFlow", "Deep Learning", "Image Processing", "Kaggle"],
+      image: "https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
       link: "#"
     },
     {
@@ -40,6 +42,7 @@ const ProjectsSection = () => {
         "Applied in areas like defense, maritime safety, and environment monitoring."
       ],
       tags: ["Arduino", "Ultrasonic Sensor", "Processing IDE", "SONAR", "Servo Motor"],
+      image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2125&q=80",
       link: "#"
     }
   ];
@@ -59,13 +62,20 @@ const ProjectsSection = () => {
         
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
-            <Card key={index} className="bg-white border border-portfolio-border shadow-md hover:shadow-xl transition-all">
-              <CardHeader className="pb-2">
-                <div className="mb-2">
-                  <Badge variant="secondary" className="bg-portfolio-accent text-portfolio-primary">
+            <Card key={index} className="bg-white border border-portfolio-border shadow-md hover:shadow-xl transition-all overflow-hidden">
+              <div className="relative h-48 overflow-hidden">
+                <img 
+                  src={project.image} 
+                  alt={project.title}
+                  className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                />
+                <div className="absolute top-4 left-4">
+                  <Badge variant="secondary" className="bg-portfolio-accent/90 text-portfolio-primary backdrop-blur-sm">
                     {project.category}
                   </Badge>
                 </div>
+              </div>
+              <CardHeader className="pb-2">
                 <CardTitle className="text-xl text-portfolio-primary">{project.title}</CardTitle>
               </CardHeader>
               <CardContent>
