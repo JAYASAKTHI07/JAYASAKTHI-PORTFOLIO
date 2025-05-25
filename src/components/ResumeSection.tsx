@@ -1,42 +1,9 @@
 
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Download, ExternalLink } from "lucide-react";
+import { Download } from "lucide-react";
 
 const ResumeSection = () => {
-  const projects = [
-    {
-      title: "SKEFLIX - Movie Recommendation System",
-      type: "Web Development Project",
-      details: [
-        "Developed a movie recommendation system using HTML, CSS, and JavaScript for the frontend and Java with Spring Boot for the backend, implementing 8+ core features.",
-        "Integrated MySQL to manage 50,000+ movie records, optimizing query performance for faster recommendations.",
-        "Implemented search, genre-based filtering, and user ratings, improving user engagement by 40%.",
-        "Designed a responsive UI, ensuring smooth performance across 10+ device types, enhancing accessibility and user experience."
-      ]
-    },
-    {
-      title: "Satellite Image Enhancement using Restormer",
-      type: "Deep Learning and Image Processing Project",
-      details: [
-        "Implemented a transformer-based model (Restormer) to denoise and enhance satellite imagery.",
-        "Fine-tuned pre-trained Restormer architecture on a satellite image classification dataset from Kaggle.",
-        "Applied Gaussian noise to simulate real-world degradation and trained using MSE-based loss.",
-        "Evaluated image quality using PSNR, MSE, SSIM, and FSIM metrics to validate performance.",
-        "Achieved high visual clarity and structural preservation in enhanced satellite images."
-      ]
-    },
-    {
-      title: "SONAR Radar Using Ultrasonic Sensor",
-      type: "Embedded and Sensing Project",
-      details: [
-        "Designed a SONAR-based object detection system using Arduino UNO, ultrasonic sensor, and servo motor.",
-        "Visualized real-time scanning data in radar format using Processing IDE.",
-        "Enabled 180° obstacle detection for surveillance and monitoring applications."
-      ]
-    }
-  ];
-
   return (
     <section id="resume" className="py-20 px-4 bg-white">
       <div className="container mx-auto">
@@ -111,33 +78,6 @@ const ResumeSection = () => {
             </div>
           </CardContent>
         </Card>
-
-        {/* Projects */}
-        <div className="mb-8">
-          <h3 className="text-2xl font-bold text-portfolio-primary mb-6">Projects</h3>
-          <div className="space-y-6">
-            {projects.map((project, index) => (
-              <Card key={index} className="bg-white border border-gray-100 shadow hover:shadow-lg transition-all">
-                <CardContent className="p-6">
-                  <div className="flex items-start justify-between mb-3">
-                    <div>
-                      <h4 className="text-lg font-semibold text-portfolio-primary">{project.title}</h4>
-                      <p className="text-sm text-portfolio-secondary font-medium">{project.type}</p>
-                    </div>
-                  </div>
-                  <ul className="space-y-2">
-                    {project.details.map((detail, detailIndex) => (
-                      <li key={detailIndex} className="flex items-start">
-                        <span className="w-2 h-2 bg-portfolio-secondary rounded-full mr-3 mt-2 flex-shrink-0"></span>
-                        <span className="text-gray-700 text-sm">{detail}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
 
         {/* Certifications and Achievements */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
