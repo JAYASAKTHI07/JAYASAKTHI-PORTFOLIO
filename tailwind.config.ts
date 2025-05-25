@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -54,13 +53,13 @@ export default {
 					foreground: 'hsl(var(--card-foreground))'
 				},
                 portfolio: {
-                    primary: '#FF6B6B',     // Coral - Bold, inviting, and attention-grabbing
-                    secondary: '#4ECDC4',   // Electric Blue - Dynamic, pairs well with coral for a striking effect
-                    accent: '#FFD166',      // Sunny Yellow - Cheerful and optimistic
-                    light: '#FEFEFE',       // Off-White - Bright and clean to let colors pop
-                    dark: '#333333',        // Charcoal Gray - Provides stability and grounding for vibrant colors
-                    highlight: '#FFB8A2',   // Bright Peach - Adds a softer, playful emphasis
-                    border: '#E0E0E0'       // Pale Gray - Keeps the focus on the vibrant elements
+                    primary: '#5B3E52',     // Deep Aubergine - Luxurious, rich, and unique
+                    secondary: '#B76E79',   // Rose Gold - Feminine, sophisticated, and warm metallic feel
+                    accent: '#A9B7B6',      // Silver Gray - Cool and elegant, adds a touch of modernism
+                    light: '#F5F0E1',       // Soft Linen - Delicate, warm, and refined
+                    dark: '#1A2C3E',        // Midnight Blue - Very dark, professional, and deep contrast
+                    highlight: '#ECC94B',   // Champagne Gold - Subtle shimmer for emphasis
+                    border: '#C4B4C4'       // Muted Mauve - Soft and elegant, complements the primary
                 }
 			},
 			borderRadius: {
