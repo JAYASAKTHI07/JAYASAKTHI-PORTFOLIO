@@ -54,13 +54,13 @@ export default {
 					foreground: 'hsl(var(--card-foreground))'
 				},
                 portfolio: {
-                    primary: '#9181A2',     // Soft Plum - Gentle, professional, and sophisticated
-                    secondary: '#D4A373',   // Clay Rose - Warm, organic highlight that pairs beautifully
-                    accent: '#DDE4D3',      // Pale Sage - Cool green-gray that soothes and balances
-                    light: '#F8F6F0',       // Ivory White - Soft off-white with an earthy undertone
-                    dark: '#3B3A3E',        // Obsidian Charcoal - Deep, near-black for strong contrast
-                    highlight: '#E2B7B1',   // Dusty Rose Pink - Elegant and muted for subtle emphasis
-                    border: '#CBC7BE'       // Warm Ash Gray - Understated, useful for dividers and background shapes
+                    primary: '#FF6B6B',     // Coral - Bold, inviting, and attention-grabbing
+                    secondary: '#4ECDC4',   // Electric Blue - Dynamic, pairs well with coral for a striking effect
+                    accent: '#FFD166',      // Sunny Yellow - Cheerful and optimistic
+                    light: '#FEFEFE',       // Off-White - Bright and clean to let colors pop
+                    dark: '#333333',        // Charcoal Gray - Provides stability and grounding for vibrant colors
+                    highlight: '#FFB8A2',   // Bright Peach - Adds a softer, playful emphasis
+                    border: '#E0E0E0'       // Pale Gray - Keeps the focus on the vibrant elements
                 }
 			},
 			borderRadius: {
