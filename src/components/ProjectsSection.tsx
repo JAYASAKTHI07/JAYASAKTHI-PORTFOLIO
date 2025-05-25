@@ -41,7 +41,7 @@ const ProjectsSection = () => {
         "Applied in areas like defense, maritime safety, and environment monitoring."
       ],
       tags: ["Arduino", "Ultrasonic Sensor", "Processing IDE", "SONAR", "Servo Motor"],
-      image: "/lovable-uploads/ee4b333e-8379-4fbe-9549-1ea84cf32c33.png",
+      image: "/lovable-uploads/18e7102b-1814-453e-8c2b-b476cc82c608.png",
       link: "#"
     }
   ];
