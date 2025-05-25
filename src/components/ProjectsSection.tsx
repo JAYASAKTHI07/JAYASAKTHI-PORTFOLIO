@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -42,7 +41,7 @@ const ProjectsSection = () => {
         "Applied in areas like defense, maritime safety, and environment monitoring."
       ],
       tags: ["Arduino", "Ultrasonic Sensor", "Processing IDE", "SONAR", "Servo Motor"],
-      image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2125&q=80",
+      image: "/lovable-uploads/ee4b333e-8379-4fbe-9549-1ea84cf32c33.png",
       link: "#"
     }
   ];
