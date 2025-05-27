@@ -1,86 +1,11 @@
 
-import React, { useState } from 'react';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { toast } from "sonner";
-
 const ContactSection = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
-  });
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    toast.success("Message sent successfully!");
-    setFormData({ name: '', email: '', message: '' });
-  };
-
   return (
     <section id="contact" className="py-16 bg-portfolio-light">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-8 text-portfolio-primary">Contact Me</h2>
         <div className="max-w-2xl mx-auto">
-          <form onSubmit={handleSubmit} className="space-y-6">
-            <div>
-              <label htmlFor="name" className="block mb-2 font-medium">
-                Name
-              </label>
-              <Input
-                type="text"
-                id="name"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                required
-                className="w-full"
-              />
-            </div>
-            <div>
-              <label htmlFor="email" className="block mb-2 font-medium">
-                Email
-              </label>
-              <Input
-                type="email"
-                id="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                required
-                className="w-full"
-              />
-            </div>
-            <div>
-              <label htmlFor="message" className="block mb-2 font-medium">
-                Message
-              </label>
-              <Textarea
-                id="message"
-                name="message"
-                value={formData.message}
-                onChange={handleChange}
-                required
-                className="w-full min-h-[150px]"
-              />
-            </div>
-            <Button 
-              type="submit" 
-              className="w-full py-3 bg-portfolio-secondary hover:bg-portfolio-dark text-white"
-            >
-              Send Message
-            </Button>
-          </form>
-          <div className="mt-12">
+          <div>
             <h3 className="text-xl font-semibold mb-4 text-portfolio-primary">Get in Touch</h3>
             <div className="space-y-3">
               <p className="flex items-center">
