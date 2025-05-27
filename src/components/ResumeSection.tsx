@@ -26,7 +26,7 @@ const ResumeSection = () => {
           </Button>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
           {/* Objective */}
           <Card className="bg-white border border-gray-100 shadow hover:shadow-lg transition-all">
             <CardContent className="p-6">
@@ -53,31 +53,6 @@ const ResumeSection = () => {
             </CardContent>
           </Card>
         </div>
-
-        {/* Technical Skills */}
-        <Card className="bg-portfolio-light border border-gray-100 shadow hover:shadow-lg transition-all mb-8">
-          <CardContent className="p-6">
-            <h3 className="text-xl font-semibold text-portfolio-primary mb-4">Technical Skills</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <div>
-                <h4 className="font-medium text-portfolio-dark mb-2">Languages</h4>
-                <p className="text-gray-700">Python, HTML, CSS, JavaScript</p>
-              </div>
-              <div>
-                <h4 className="font-medium text-portfolio-dark mb-2">Tools</h4>
-                <p className="text-gray-700">GitHub, MATLAB, Arduino IDE</p>
-              </div>
-              <div>
-                <h4 className="font-medium text-portfolio-dark mb-2">Technologies</h4>
-                <p className="text-gray-700">IoT, Embedded Systems</p>
-              </div>
-              <div>
-                <h4 className="font-medium text-portfolio-dark mb-2">Soft Skills</h4>
-                <p className="text-gray-700">Problem solving, Debugging, Logical Thinking, Communication</p>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
 
         {/* Certifications and Achievements */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

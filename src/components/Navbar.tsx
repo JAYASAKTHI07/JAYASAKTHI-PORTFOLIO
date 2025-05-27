@@ -35,7 +35,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4 md:px-6 py-4">
         <div className="flex justify-between items-center">
           <a href="#home" className="text-xl font-bold text-portfolio-primary">
-            Jaya Sakthi S
+            Home
           </a>
           
           {/* Desktop Navigation */}
@@ -49,12 +49,6 @@ const Navbar = () => {
                 {item.name}
               </a>
             ))}
-            <Button 
-              className="bg-portfolio-secondary hover:bg-portfolio-primary text-white" 
-              asChild
-            >
-              <a href="#contact">Get In Touch</a>
-            </Button>
           </div>
           
           {/* Mobile Navigation Button */}
@@ -84,12 +78,6 @@ const Navbar = () => {
                   {item.name}
                 </a>
               ))}
-              <Button 
-                className="bg-portfolio-secondary hover:bg-portfolio-primary text-white w-full" 
-                asChild
-              >
-                <a href="#contact" onClick={() => setIsMenuOpen(false)}>Get In Touch</a>
-              </Button>
             </div>
           </div>
         )}
