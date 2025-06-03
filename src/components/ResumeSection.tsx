@@ -4,10 +4,10 @@ import { Button } from '@/components/ui/button';
 
 const ResumeSection = () => {
   const handleDownload = () => {
-    // Create a link element and trigger download
+    // Create a link element and trigger download of the resume image
     const link = document.createElement('a');
-    link.href = '/resume.pdf'; // You'll need to add your resume.pdf file to the public folder
-    link.download = 'Jaya_Sakthi_S_Resume.pdf';
+    link.href = '/lovable-uploads/7eedc917-dd5f-4bf1-95f7-e2100e5c5065.png';
+    link.download = 'Jaya_Sakthi_S_Resume.png';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
